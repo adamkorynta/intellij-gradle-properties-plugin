@@ -1,0 +1,19 @@
+<idea-plugin>
+	<id>com.geiconsultants.intellij.gradle.properties.plugin</id>
+	<name>Gradle Properties</name>
+	<vendor email="adam@rmanet.com">GEI Consultants</vendor>
+
+	<depends>com.intellij.modules.platform</depends>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<projectService
+				serviceImplementation="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesStateService"/>
+
+		<postStartupActivity
+				implementation="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesStartupActivity"/>
+		<toolWindow
+				id="Gradle Properties"
+				anchor="right"
+				factoryClass="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesToolWindowFactory"/>
+	</extensions>
+</idea-plugin>
