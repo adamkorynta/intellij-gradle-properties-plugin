@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.geiconsultants"
-version = "1.0-SNAPSHOT"
+version = "1.0.0-beta1"
 
 repositories {
     mavenCentral()
@@ -32,5 +32,15 @@ tasks {
     patchPluginXml {
         sinceBuild.set("243")
         untilBuild.set("253.*")
+    }
+
+    signPlugin {
+        certificateChain.set(providers.environmentVariable("CERTIFICATE_CHAIN"))
+        privateKey.set(providers.environmentVariable("PRIVATE_KEY"))
+        password.set(providers.environmentVariable("PRIVATE_KEY_PASSWORD"))
+    }
+
+    publishPlugin {
+        token.set(providers.environmentVariable("PUBLISH_TOKEN"))
     }
 }
