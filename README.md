@@ -39,6 +39,7 @@ db.url=jdbc:postgresql://localhost:5432/app
 # @doc Enable SQL logging
 # @type boolean
 db.sql.logging=false
+```
 
 ## Development
 
