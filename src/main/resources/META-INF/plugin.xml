@@ -1,11 +1,25 @@
 <idea-plugin>
-	<id>com.geiconsultants.intellij.gradle.properties.plugin</id>
+	<id>com.geiconsultants.gradle.properties.plugin</id>
 	<name>Gradle Properties</name>
 	<vendor email="adam@rmanet.com">GEI Consultants</vendor>
 
 	<depends>com.intellij.modules.platform</depends>
+    <description><![CDATA[
+        Provides a tool window for managing Gradle properties based on template files.
+        <br/><br/>
+        The plugin reads <code>gradle.properties</code> together with one or more
+        <code>gradle.properties.*</code> template files and presents the properties in a
+        structured, editable table.
+        <br/><br/>
+        Template files can include structured documentation comments to describe each
+        property and mark required values. Changes can be previewed using a unified,
+        read-only diff before being safely merged back into <code>gradle.properties</code>.
+        <br/><br/>
+        This plugin is intended to simplify configuration management for projects that
+        rely on documented Gradle property templates.
+    ]]></description>
 
-	<extensions defaultExtensionNs="com.intellij">
+    <extensions defaultExtensionNs="com.intellij">
 		<projectService
 				serviceImplementation="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesStateService"/>
 
