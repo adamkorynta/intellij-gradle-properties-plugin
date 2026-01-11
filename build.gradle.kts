@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.geiconsultants"
-version = "1.0.0-beta1"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
