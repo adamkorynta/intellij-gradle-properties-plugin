@@ -29,7 +29,7 @@ class GradlePropertiesPanel(private val project: Project) : JPanel(BorderLayout(
     init {
         // ---------------- Toolbar ----------------
         val actionGroup = DefaultActionGroup().apply {
-            add(LoadGradlePropertiesAction(this@GradlePropertiesPanel))
+            add(LoadGradlePropertiesAction())
             add(SaveGradlePropertiesAction(this@GradlePropertiesPanel))
         }
 

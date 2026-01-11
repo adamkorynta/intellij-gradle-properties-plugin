@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+    <!-- Document -->
+    <rect x="7" y="5" width="26" height="30" rx="3"
+          fill="#2B2D30" stroke="#5A5D63" stroke-width="1"/>
+
+    <!-- Fold -->
+    <path d="M27 5v6h6" fill="#3A3D42"/>
+    <path d="M27 5v6h6" fill="none" stroke="#5A5D63" stroke-width="1"/>
+
+    <!-- Property sliders -->
+    <g stroke="#B0B3B8" stroke-width="1.6" stroke-linecap="round">
+        <line x1="12" y1="17" x2="28" y2="17"/>
+        <line x1="12" y1="23" x2="28" y2="23"/>
+        <line x1="12" y1="29" x2="28" y2="29"/>
+    </g>
+
+    <g>
+        <circle cx="18" cy="17" r="2.2" fill="#5C8DFF"/>
+        <circle cx="24" cy="23" r="2.2" fill="#9B86FF"/>
+        <circle cx="20" cy="29" r="2.2" fill="#5C8DFF"/>
+    </g>
+</svg>

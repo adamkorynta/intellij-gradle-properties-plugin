@@ -20,14 +20,12 @@
     ]]></description>
 
     <extensions defaultExtensionNs="com.intellij">
-		<projectService
-				serviceImplementation="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesStateService"/>
-
 		<postStartupActivity
 				implementation="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesStartupActivity"/>
 		<toolWindow
 				id="Gradle Properties"
 				anchor="right"
-				factoryClass="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesToolWindowFactory"/>
+				factoryClass="com.geiconsultants.intellij.gradle.properties.plugin.GradlePropertiesToolWindowFactory"
+				icon="/META-INF/pluginIcon.svg"/>
 	</extensions>
 </idea-plugin>

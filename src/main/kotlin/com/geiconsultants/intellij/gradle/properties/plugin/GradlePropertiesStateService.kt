@@ -7,6 +7,7 @@ import com.intellij.openapi.vfs.VirtualFile
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
+@Service(Service.Level.PROJECT)
 class GradlePropertiesStateService(private val project: Project) {
     private val _stateUpdateCounter = MutableStateFlow(0)
     val stateUpdateEvents = _stateUpdateCounter.asStateFlow()
@@ -19,10 +20,8 @@ class GradlePropertiesStateService(private val project: Project) {
 
     fun refresh() {
         DumbService.getInstance(project).runWhenSmart {
-            val newTemplates =
-                GradlePropertiesLoader.findTemplates(project)
-            val newGradleProps =
-                GradlePropertiesLoader.findGradleProperties(project)
+            val newTemplates = GradlePropertiesLoader.findTemplates(project)
+            val newGradleProps = GradlePropertiesLoader.findGradleProperties(project)
 
             templates = newTemplates
             gradleProperties = newGradleProps

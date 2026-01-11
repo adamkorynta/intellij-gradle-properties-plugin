@@ -5,9 +5,7 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.fileEditor.FileDocumentManager
 
-class LoadGradlePropertiesAction(
-    private val panel: GradlePropertiesPanel
-) : AnAction(
+class LoadGradlePropertiesAction() : AnAction(
     "Load / Refresh",
     "Force reload of gradle.properties files",
     AllIcons.Actions.Refresh

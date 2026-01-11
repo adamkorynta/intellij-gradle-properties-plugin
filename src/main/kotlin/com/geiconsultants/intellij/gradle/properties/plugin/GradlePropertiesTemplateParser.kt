@@ -13,7 +13,6 @@ object GradlePropertiesTemplateParser {
                 val line = rawLine.trim()
 
                 when {
-                    // Structured comment line
                     line.startsWith("#") || line.startsWith("!") -> {
                         val comment = line
                             .removePrefix("#")
@@ -24,8 +23,6 @@ object GradlePropertiesTemplateParser {
                             pendingDocLines.add(comment)
                         }
                     }
-
-                    // Property line
                     '=' in line && !line.startsWith("#") && !line.startsWith("!") -> {
                         val (key, value) = line.split("=", limit = 2)
                         val doc = parseDocBlock(pendingDocLines)
@@ -33,8 +30,6 @@ object GradlePropertiesTemplateParser {
                         result[key.trim()] = value.trim() to doc
                         pendingDocLines.clear()
                     }
-
-                    // Anything else breaks association
                     else -> {
                         pendingDocLines.clear()
                     }
