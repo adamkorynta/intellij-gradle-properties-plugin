@@ -1,6 +1,6 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.10.5"
+    kotlin("jvm") version "2.3.0"
+    id("org.jetbrains.intellij.platform") version "2.11.0"
 }
 
 group = "com.geiconsultants"
