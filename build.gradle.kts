@@ -1,10 +1,10 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.10.5"
+    kotlin("jvm") version "2.4.20"
+    id("org.jetbrains.intellij.platform") version "2.19.0"
 }
 
 group = "com.geiconsultants"
-version = "1.0.1"
+version = "1.0.2"
 
 repositories {
     mavenCentral()
@@ -15,7 +15,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        create("IC", "2024.3")
+        intellijIdea("2026.2")
     }
     testImplementation(kotlin("test"))
 }
@@ -30,8 +30,8 @@ tasks.test {
 
 tasks {
     patchPluginXml {
-        sinceBuild.set("243")
-        untilBuild.set("253.*")
+        sinceBuild.set("262")
+        untilBuild.set("262.*")
     }
 
     signPlugin {

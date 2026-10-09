@@ -58,8 +58,8 @@ This project is built using the **IntelliJ Platform Gradle Plugin (2.x)** and **
 ### Project Configuration
 
 - **SDK**: Java 21 (managed via Foojay Toolchains)
-- **Target Platform**: IntelliJ IDEA 2024.3+
-- **Language**: Kotlin 2.1.0
+- **Target Platform**: IntelliJ IDEA 2026.2+
+- **Language**: Kotlin 2.4.20
 
 ## Installation
 
