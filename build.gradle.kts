@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.geiconsultants"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenCentral()
@@ -31,7 +31,7 @@ tasks.test {
 tasks {
     patchPluginXml {
         sinceBuild.set("262")
-        untilBuild.set("262.*")
+        untilBuild.set(provider { null })
     }
 
     signPlugin {
